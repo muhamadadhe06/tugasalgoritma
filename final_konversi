@@ -1,0 +1,54 @@
+#include <stdio.h>   /*HEADER*/
+main(){
+   int pilihan; /*nominal angka bulat maka dipakai int (integer)*/
+   float celcius,reamur,fahrenheit,suhu_awal; /*nominal angka yang memiliki angka dibelakang 0 jadi digunakan float*/
+   printf("\t\tProgram Konversi Suhu Sederhana\n");
+   printf("\t\t===============================\n");
+   printf("> Cara Memakai\n");
+   printf("-Pilih satuan awal yang akan diubah\n");
+   printf("-Masukan satuan awalnya (bisa menggunakan satuan pecahan (Misal :213.9))\n");
+   printf("-Hasil yang keluar adalah hasil dari konversi ketiga satuan Suhu\n\n");
+   printf("\t\t----====Selamat Mencoba====----\n\n\n");
+   printf("\t\t-----======Wellcomes======-----\n");
+   printf("Pertama masukan pilihan (nomor) satuan awal\n");
+   printf("\n1. Celcius");   /*PILIHAN PERTAMA*/
+   printf("\n2. Fahrenheit");  /*PILIHAN KEDUA*/
+   printf("\n3. Reamur");  /*PILIHAN KETIGA*/
+   printf("\n> Masukan pilihan satuan awal ");
+   scanf("%d",&pilihan); /*sekarang kita memakai %d karena pasti dipilihan ini selalu bilangan bulat karena %d dipakai untuk pengganti jawaban untuk angka bulat*/
+   if (pilihan==1) /*ini menghubungkan jika kita memilih 1 yaitu input celcius*/
+      {
+       printf("\nMasukan suhu dalam satuan Celcius ");
+    scanf("%f",&suhu_awal); /*kenapa menggunakan %f? jawabannya mudah karena data disini mengandung pecahan sesuai dengan bawah string main itu sudah saya tentukan juga mana yang bilangan bulat dan bilangan pecahan, jika bilangan bulat penggantinya %d, maka bilangan pecahan penggantinya %f*/
+       fahrenheit=suhu_awal*1.8+32; /*jangan tanyakan rumus konversi karena saya menggunakan rumus suhu hasil search google*/
+        reamur=suhu_awal*0.8;
+        celcius=suhu_awal;
+      }
+   else if(pilihan==2) /*jika user memilih fahrenheit maka akan jadi seperti ini, tpi kita tdak boleh menggunakan if kembali, berarti kalau kita menggunakan if kembali kita akan memisahkan data dari atasnya*/
+      {
+        printf("\nMasukan suhu dalam satuan Fahrenheit ");
+    scanf("%f",&suhu_awal);
+       celcius=(suhu_awal-32)/1.8;
+        reamur=(suhu_awal-32)/2.25;
+        fahrenheit=suhu_awal;
+      }
+   else if(pilihan==3)
+      {
+       printf("\nMasukan suhu dalam satuan Reamur ");
+    scanf("%f",&suhu_awal);
+       celcius=suhu_awal/0.8;
+        fahrenheit=suhu_awal*2.25+32;
+        reamur=suhu_awal;
+      }
+   printf("\nHasil konversi"); /*dari mulai baris ini sampai 4 baris kebawah adalah hasil yang akan ditampilkan maka kita gunakan printf*/
+   printf("\n==============");
+   printf("\nCelcius    = %f",celcius);
+   printf("\nFahrenheit = %f",fahrenheit);
+   printf("\nReamur     = %f",reamur);
+
+
+   printf("\n \t\t\t\t\tCredit by Muhamad Ade Nur Rifai");
+   printf("\n \t\t\t\t\t\tManajemen Informatika A");
+   /*Source base object : balecomputer.blogspot.com*/
+   /*Mengambil script kalkulator dari web tersebut dan mengubah hitungan kalkulator menjadi konversi suhu dengan bantuan google tentunya*/
+}
