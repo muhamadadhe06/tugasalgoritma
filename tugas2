@@ -1,0 +1,64 @@
+#include <stdio.h>
+main () {
+    int pilihan;
+    float r,hasil,pi,t,j;
+    pi=3,14;
+    printf("\t\t\t======================================\n");
+    printf("\t\t\tSelamat Datang Di Program Penghitungan\n");
+    printf("\t\t\t======================================\n\n");
+    printf("\nPertama Pilih Menu yang Anda inginkan :\n");
+    printf("1. Menghitung Volume Kubus\n");
+    printf("2. Menghitung Luas Lingkaran\n");
+    printf("3. Menghitung Volume Silinder\n");
+    printf("\nMasukan pilihan anda : ");
+        scanf("%d",&pilihan);
+if (pilihan==1)
+    {
+    printf("\n\nRumus Volome Kubus adalah");
+    printf("\nVolume = r3");
+    printf("\nMasukan Panjang Rusuk dalam cm = ");
+        scanf("%f",&r);
+    hasil=r*r*r;
+    printf("\n================================");
+    printf("\nMaka Hasilnya adalah = %2.2f cm3", hasil);
+    printf("\n================================");
+    }
+else if (pilihan==2)
+    {
+    printf("\n\nRumus Luas Lingkaran adalah");
+    printf("\nLuas = pi x r2");
+    printf("\nMasukan Panjang jari-jari dalam cm = ");
+        scanf("%f",&j);
+    hasil=pi * j * j;
+    printf("\n================================");
+    printf("\nMaka Hasilnya adalah = %2.2f cm2", hasil);
+    printf("\n================================");
+    }
+else if (pilihan==3)
+    {
+    printf("\n\nRumus Volume Tabung adalah");
+    printf("\nVolume =pi x r2 x t");
+    printf("\nMasukan Panjang jari jari dalam cm = ");
+        scanf("%f",&j);
+    printf("\nMasukan tinggi dalam cm = ");
+    scanf("%f",&t);
+        hasil=pi*j*j*t;
+        printf("\n================================");
+        printf("\nMaka Hasilnya adalah = %2.2f cm3", hasil);
+        printf("\n================================");
+    }
+else
+    {
+    printf("\n========================================");
+    printf("\nInputan tidak ditemukan,restart program");
+    printf("\n========================================");
+    }
+    printf("\n\t\t\t\t\t\t================================");
+    printf("\t\t\t\t\t\tCredit :\n");
+    printf("\t\t\t\t\t\tMuhamad Ade Nur Rifa'i\n");
+    printf("\t\t\t\t\t\tManajemen Informatika A\n");
+    printf("\t\t\t\t\t\t314 3111 011\n");
+    printf("\t\t\t\t\t\t================================\n");
+getch();
+}
+
