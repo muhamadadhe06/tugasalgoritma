@@ -1,0 +1,80 @@
+#include <conio.h>
+#include <iostream.h>
+
+void main (){
+int menu;
+int a[2][5]={4,5,8,1,2,3,11,23,10,7};
+cout<<"Muhamad Ade Nur Rifai"<<endl;
+cout<<"3143111011"<<endl;
+cout<<"Manajemen Informatika A"<<endl;
+cout<<"Note: Pak maaf untuk yang case 2 udah buntu"<<endl<<"jadi tadi saya pasang [ASK] di group pemrograman"<<endl;
+cout<<endl<<endl;
+cout<<"          Quiz Pak Ichsan Algoritma dan struktur data 1"<<endl;
+cout<<"================================================================"<<endl<<endl;
+cout<<"Diketahui Array a[2][5]={4,5,8,1,2,3,11,23,10,7}"<<endl<<endl;
+cout<<"1. Sebuah nilai terletak di indeks ke- berapa"<<endl;
+cout<<"2. Pengurutan dengan metode seleksi minimal"<<endl;
+cout<<"Masukan pilihan : ";cin>>menu;
+clrscr();
+switch(menu){
+
+case 1:
+{
+ int nilai;
+ cout<<endl;
+ cout<<"================================================================"<<endl<<endl;
+ cout<<"Diketahui Array a[2][5]={4,5,8,1,2,3,11,23,10,7}"<<endl<<endl;
+ cout<<" Nilai yang dicari adalah : ";
+ cin>> nilai;
+ for(int d = 0; d < 2; d++) {
+ for(int e = 0; e < 5; e++) {
+  if(a[d][e] == nilai) {
+  cout<<endl;
+  cout<<"Nilai "<<nilai<<" terdapat pada indeks ke a["<<d<<"]["<<e<<"]"<<endl<<endl;
+  cout<<"================================================================"<<endl<<endl;
+  break;
+  }
+  }
+ }
+break;
+}
+case 2:
+{
+ {
+int i,j,m,l,in,t;
+for(i=0;i<2*5-1;i++)
+{
+m=a[i/5][i%5];
+in=i;
+for(j=1;j<2*5-i;j++)
+{
+l=a[(i+j)/5][(i+j)%5];
+if(m>l)
+{
+m=l;
+in=i+j;
+}
+}
+a[in/5][in%5]=a[i/5][i%5];
+a[i/5][i%5]=m;
+}
+cout<<"===================================================================="<<endl<<endl;
+cout<<"Setelah diurutkan :"<<endl;
+for(i=0;i<=1;i++)
+for(j=0;j<5;j++)
+cout<<a[i][j]<<" ";
+cout<<endl<<endl<<endl;
+cout<<"===================================================================="<<endl;
+getch();
+}
+break;
+}
+default:
+{
+cout<<"Inputan Salah"<<endl;
+break;
+}
+}
+clrscr();
+getch();
+}
